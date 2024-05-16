@@ -1,0 +1,30 @@
+.weather-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  gap: 10px;
+  background-image: '../images/background.png';
+}
+.city-input {
+  width: 60%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.add-city-button {
+  padding: 20px 40px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #3f3d56;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+.add-city-button:hover {
+  background-color: #2e2c42;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
