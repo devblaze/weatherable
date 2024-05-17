@@ -1,6 +1,11 @@
+// src/App.test.js
 import React from 'react';
 import { render, fireEvent, waitFor } from '@testing-library/react';
-import App from './App';  // Adjust the import path to point to the correct location of App.js
+import App from './App';
+
+beforeEach(() => {
+  fetch.resetMocks();
+});
 
 test('renders header, form, and weather cards', () => {
   const { getByText, getByPlaceholderText } = render(<App />);
@@ -10,6 +15,14 @@ test('renders header, form, and weather cards', () => {
 });
 
 test('adds weather card on form submit', async () => {
+  fetch.mockResponseOnce(JSON.stringify({
+    main: { temp: 21.4 },
+    weather: [{ main: 'Clear sky', description: 'clear sky', icon: '01d' }],
+    name: 'New York',
+    sys: { country: 'US' },
+    coord: { lat: 40.7143, lon: -74.006 },
+  }));
+
   const { getByPlaceholderText, getByText, getByAltText } = render(<App />);
 
   const input = getByPlaceholderText(/Example: New York, United States/i);
