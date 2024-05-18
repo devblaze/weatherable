@@ -1,30 +1,70 @@
+.weather-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../images/background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 320px; /* Adjust the height as needed */
+}
+
 .weather-form {
   display: flex;
   justify-content: center;
-  margin-bottom: 30px;
   gap: 10px;
-  background-image: '../images/background.png';
+  padding: 0 20px; /* Add padding to the left and right */
 }
+
+.city-input-container {
+  position: relative;
+  width: 100%;
+}
+
 .city-input {
-  width: 60%;
-  padding: 12px;
+  width: 500px; /* Default width for larger screens */
+  max-width: 100%; /* Ensure it doesn't overflow */
+  padding: 12px 12px 12px 40px; /* Add left padding for the icon */
   font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 1px solid #373656;
+  border-radius: 7px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-image: url('../images/input_icon.png'); /* Add your icon here */
+  background-size: 17px 24px; /* Adjust icon size */
+  background-position: 10px center; /* Position the icon */
+  background-repeat: no-repeat;
 }
+
 .add-city-button {
-  padding: 20px 40px;
-  font-size: 1rem;
+  width: 130px;
+  height: 54px;
+  padding: 12px 20px;
+  font-size: 0.8rem;
   cursor: pointer;
-  background-color: #3f3d56;
+  background-color: #373656;
   color: white;
   border: none;
   border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s, box-shadow 0.3s;
 }
+
 .add-city-button:hover {
-  background-color: #2e2c42;
+  background-color: #353383;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Media queries for mobile responsiveness */
+@media (max-width: 480px) {
+  .weather-form {
+    width: 70%;
+    flex-direction: column; /* Stack input and button in two rows for mobile view */
+    align-items: center;
+    gap: 10px;
+    padding: 0 20px; /* Add padding to the left and right */
+  }
+
+  .add-city-button {
+    width: 117%;
+  }
 }

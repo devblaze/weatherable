@@ -2,32 +2,18 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    background-color: #f5f5f5;
+    background-color: #FFFFFF;
   }
-  
+
   .container {
-    max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
   }
-  
+
   .weather-cards {
+    /*max-width: 3000px;*/
+    margin: 60px;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
   }
-  
-  @media (max-width: 768px) {
-    .weather-form {
-      flex-direction: column;
-      gap: 10px;
-    }
-    .city-input {
-      width: 100%;
-    }
-    .weather-cards {
-      justify-content: center;
-    }
-  }
-  

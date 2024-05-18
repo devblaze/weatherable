@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Header from './components/Header';
 import WeatherForm from './components/WeatherForm';
 import WeatherCard from './components/WeatherCard';
+import Footer from './components/Footer';
 import './styles/style.css';
 import { fetchWeatherData } from './services/weatherService';
 
@@ -26,6 +27,7 @@ const App = () => {
                     <WeatherCard key={index} weather={weather} />
                 ))}
             </main>
+            <Footer />
         </div>
     );
 };
