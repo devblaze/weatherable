@@ -13,3 +13,8 @@ Weatherable is a simple React application that provides weather data for selecte
    ```bash
    git clone https://github.com/your-username/weatherable.git
    cd weatherable
+2. Start or run test:
+   ```bash
+   npm start
+   ||
+   npm test
