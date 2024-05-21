@@ -10,7 +10,6 @@ body, html {
   }
 
   .weather-cards {
-    /*max-width: 3000px;*/
     margin: 60px;
     display: flex;
     flex-wrap: wrap;
