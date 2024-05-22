@@ -11,7 +11,7 @@ Weatherable is a simple React application that provides weather data for selecte
 ## Getting Started
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/weatherable.git
+   git clone https://github.com/devblaze/weatherable.git
    cd weatherable
 2. Start or run test:
    ```bash
